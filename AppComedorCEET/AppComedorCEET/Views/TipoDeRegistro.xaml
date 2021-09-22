@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppComedorCEET.Views.TipoDeRegistro">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Frame BackgroundColor="#9abc2b" Padding="10" CornerRadius="0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="logo.png"  />
+                <Label Text="CEET - 277" HorizontalOptions="CenterAndExpand" TextColor="White" 
+                  VerticalTextAlignment="Center" FontSize="36"/>
+            </StackLayout>
+        </Frame>
+        <Label Text="Defina el tipo de cuenta que desea crear" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Padding="30"/>
+        <RadioButton Content="Comensal" IsChecked="true" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,5"/>
+        <RadioButton Content="Administrativo" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,5"/>
+        <Label Text="Ingrese la contraseña para comensal" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="30,5"/>
+        <Label Text="Contraseña:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="5" />        
+        <Entry Text="" TextColor="Black" Placeholder="Escriba su contraseña" Grid.Row="5" Grid.Column="1" IsPassword="True" Margin="0,0,30,0"/>
+        <Button 
+            Grid.Row="6" 
+            Grid.Column="0" 
+            Grid.ColumnSpan="2"
+            Margin="60"
+            Text="Continuar"
+            BackgroundColor="DarkSeaGreen"
+            />
+    </Grid>
+</ContentPage>

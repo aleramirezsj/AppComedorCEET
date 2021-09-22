@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppComedorCEET.PaginaInicio">
+    <!--StackLayout es un contenedor de elementos gráficos, que puede ser vertical 
+        u horizontal(es una pila) -->
+    <StackLayout>
+        <Frame BackgroundColor="#9abc2b" Padding="10" CornerRadius="0">
+            <StackLayout Orientation="Horizontal">
+            <Image Source="logo.png"  />
+            <Label Text="Hoy probamos Xamarin Forms" HorizontalTextAlignment="Center" TextColor="White" FontSize="Title"/>
+            </StackLayout>
+        </Frame>
+        <Label Text="Hot reload está bárbaro" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Hoy le decimos a mamá que estuve constru yendo App moviles!" FontSize="16" Padding="0,0,0,0" FontAttributes="Bold"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Learn more at "/>
+                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
