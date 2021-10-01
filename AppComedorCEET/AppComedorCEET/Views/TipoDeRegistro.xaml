@@ -25,9 +25,10 @@
             </StackLayout>
         </Frame>
         <Label Text="{Static core:Literals.TextoPantallaTipoRegistro}" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Padding="30"/>
-        <RadioButton Content="Comensal" IsChecked="true" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,5"/>
-        <RadioButton Content="Administrativo" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,5"/>
-        <Label Text="Ingrese la contraseña para comensal" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="30,5"/>
+        <RadioButton x:Name="RbtTipoRegistroComensal"  Content="Comensal" IsChecked="true" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,5" CheckedChanged="CambioEnElTipoDeRegistro" />
+        <RadioButton x:Name="RbtTipoRegistroAdministrativo" Content="Administrativo" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,5"
+          CheckedChanged="CambioEnElTipoDeRegistro" />
+        <Label x:Name="LblTextoInformativoContraseña"  Text="Ingrese la contraseña para comensal" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="30,5"/>
         <Label Text="Contraseña:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="5" />        
         <Entry Text="" TextColor="Black" Placeholder="Escriba su contraseña" Grid.Row="5" Grid.Column="1" IsPassword="True" Margin="0,0,30,0"/>
         <Button 

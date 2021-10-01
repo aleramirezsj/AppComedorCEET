@@ -16,5 +16,16 @@ namespace AppComedorCEET.Views
         {
             InitializeComponent();
         }
+        private void CambioEnElTipoDeRegistro(object sender, EventArgs e)
+        {
+            if (RbtTipoRegistroComensal.IsChecked)
+            {
+                LblTextoInformativoContraseña.Text = "Ingrese la contraseña para comensal";
+            }
+            if (RbtTipoRegistroAdministrativo.IsChecked)
+            {
+                LblTextoInformativoContraseña.Text = "Ingrese la contraseña para administrativo";
+            }
+        }
     }
 }
