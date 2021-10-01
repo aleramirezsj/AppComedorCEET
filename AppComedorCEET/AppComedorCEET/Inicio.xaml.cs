@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppComedorCEET.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,5 +17,11 @@ namespace AppComedorCEET
         {
             InitializeComponent();
         }
+        private void AbrirPantallaTipoRegistro(object sender, EventArgs e)
+        {
+            _ = Navigation.PushAsync(new TipoDeRegistro());
+        }
+
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:core="clr-namespace:AppComedorCEET.Core"
              x:Class="AppComedorCEET.Views.TipoDeRegistro">
     <Grid>
         <Grid.RowDefinitions>
@@ -17,14 +17,14 @@
             <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
 
-        <Frame BackgroundColor="#9abc2b" Padding="10" CornerRadius="0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+        <Frame BackgroundColor="{StaticResource ColorCabezera}" Padding="10" CornerRadius="0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
             <StackLayout Orientation="Horizontal">
                 <Image Source="logo.png"  />
-                <Label Text="CEET - 277" HorizontalOptions="CenterAndExpand" TextColor="White" 
+                <Label Text="{Static core:Literals.TituloApp}" HorizontalOptions="CenterAndExpand" TextColor="White" 
                   VerticalTextAlignment="Center" FontSize="36"/>
             </StackLayout>
         </Frame>
-        <Label Text="Defina el tipo de cuenta que desea crear" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Padding="30"/>
+        <Label Text="{Static core:Literals.TextoPantallaTipoRegistro}" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Padding="30"/>
         <RadioButton Content="Comensal" IsChecked="true" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,5"/>
         <RadioButton Content="Administrativo" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,5"/>
         <Label Text="Ingrese la contraseña para comensal" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Margin="30,5"/>
@@ -36,7 +36,7 @@
             Grid.ColumnSpan="2"
             Margin="60"
             Text="Continuar"
-            BackgroundColor="DarkSeaGreen"
+            BackgroundColor="{StaticResource ColorBotones}"
             />
     </Grid>
 </ContentPage>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppComedorCEET.Core" 
              x:Class="AppComedorCEET.Inicio">
     <Grid>
         <Grid.RowDefinitions>
@@ -16,35 +17,35 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <Frame BackgroundColor="#9abc2b" Padding="10" CornerRadius="0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+        <Frame BackgroundColor="{StaticResource ColorCabezera}" Padding="10" CornerRadius="0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
             <StackLayout Orientation="Horizontal">
                 <Image Source="logo.png"  />
-                <Label Text="CEET - 277" HorizontalOptions="CenterAndExpand" TextColor="White" 
+                <Label Text="{x:Static local:Literals.TituloApp }" HorizontalOptions="CenterAndExpand" TextColor="White" 
                   VerticalTextAlignment="Center" FontSize="36"/>
             </StackLayout>
         </Frame>
-        <Label Text="Hola ingresa tu DNI para identificarte en la aplicación" VerticalOptions="CenterAndExpand"
+        <Label Text="{x:Static local:Literals.TextoPantallaInicio}" VerticalOptions="CenterAndExpand"
                HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Padding="50"/>
         <Label Text="DNI:" HorizontalTextAlignment="End" TextColor="Black" VerticalTextAlignment="Center" FontSize="Medium" Grid.Column="0" Grid.Row="2"/>
-        <Entry Text="" TextColor="Black" Placeholder="Escriba su DNI sin puntos" Grid.Row="2" Grid.Column="1" />
+        <Entry Text="" TextColor="Black" Placeholder="{x:Static local:Literals.PlaceHolderDni}" Grid.Row="2" Grid.Column="1" />
         <Label Text="Contraseña:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="3"/>
-        <Entry Text="" TextColor="Black" Placeholder="Escriba su contraseña" Grid.Row="3" Grid.Column="1" IsPassword="True" />
+        <Entry Text="" TextColor="Black" Placeholder="{x:Static local:Literals.PlaceHolderContraseña}" Grid.Row="3" Grid.Column="1" IsPassword="True" />
         <Button 
             Grid.Row="4" 
             Grid.Column="0" 
             Grid.ColumnSpan="2"
-            Text="Ingresar"
-            BackgroundColor="DarkSeaGreen"
+            Text="{x:Static local:Literals.TextoBotonIngresar}"
+            BackgroundColor="{x:StaticResource ColorBotones}"
             Margin="20,2"
             />
         <Button 
             Grid.Row="5" 
             Grid.Column="0" 
             Grid.ColumnSpan="2"
-            Text="Registrate"
-            BackgroundColor="DarkSeaGreen"
+            Text="{Static local:Literals.TextoBotonRegistrate}"
+            BackgroundColor="{StaticResource ColorBotones}"
             Margin="20,2"
-
+            Clicked="AbrirPantallaTipoRegistro"
             />
 
     </Grid>

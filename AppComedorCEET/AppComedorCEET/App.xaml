@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComedorCEET.App">
     <Application.Resources>
-
+        <Color x:Key="ColorBotones">BurlyWood</Color>
+        <Color x:Key="ColorCabezera">DarkMagenta</Color>
     </Application.Resources>
 </Application>

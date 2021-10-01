@@ -11,7 +11,7 @@ namespace AppComedorCEET
         {
             InitializeComponent();
 
-            MainPage = new TipoDeRegistro();
+            MainPage = new NavigationPage(new Inicio());
         }
 
         protected override void OnStart()
