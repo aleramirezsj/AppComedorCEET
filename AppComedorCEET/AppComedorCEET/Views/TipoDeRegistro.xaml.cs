@@ -12,6 +12,7 @@ namespace AppComedorCEET.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TipoDeRegistro : ContentPage
     {
+        private string tipoSeleccionado;
         public TipoDeRegistro()
         {
             InitializeComponent();
@@ -20,12 +21,16 @@ namespace AppComedorCEET.Views
         {
             if (RbtTipoRegistroComensal.IsChecked)
             {
-                LblTextoInformativoContraseña.Text = "Ingrese la contraseña para comensal";
-            }
-            if (RbtTipoRegistroAdministrativo.IsChecked)
+                tipoSeleccionado = "Comensal";
+            } else if (RbtTipoRegistroAdministrativo.IsChecked)
             {
-                LblTextoInformativoContraseña.Text = "Ingrese la contraseña para administrativo";
+                tipoSeleccionado = "Administrativo";
             }
+            LblTextoInformativoContraseña.Text = $"Ingrese la contraseña para {tipoSeleccionado}";
+        }
+        private void AbrirPantallaCrearCuenta(object sender, EventArgs e)
+        {
+                _ = Navigation.PushAsync(new CrearCuenta(tipoSeleccionado));
         }
     }
 }

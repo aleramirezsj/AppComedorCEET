@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:AppComedorCEET.Core"
+             x:Class="AppComedorCEET.Views.CrearCuenta">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.8*"/>
+            <ColumnDefinition Width="1.8*"/>
+        </Grid.ColumnDefinitions>
+
+        <Frame BackgroundColor="{StaticResource ColorCabezera}" Padding="10" CornerRadius="0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="logo.png"  />
+                <Label Text="{Static core:Literals.TituloApp}" HorizontalOptions="CenterAndExpand" TextColor="White" 
+                  VerticalTextAlignment="Center" FontSize="36"/>
+            </StackLayout>
+        </Frame>
+        <Label x:Name="LblTituloPantalla" Text="REGISTRO CUENTA " HorizontalTextAlignment="Start" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Padding="30" TextTransform="Uppercase"/>
+        <Label Text="Nombre:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="2" />
+        <Entry Text="" TextColor="Black" Placeholder="Escriba su nombre" Grid.Row="2" Grid.Column="1"  Margin="0,0,30,0"/>
+        <Label Text="Apellido:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="3" />
+        <Entry Text="" TextColor="Black" Placeholder="Escriba su apellido" Grid.Row="3" Grid.Column="1"  Margin="0,0,30,0"/>
+        <Label Text="Email:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="4" />
+        <Entry Text="" TextColor="Black" Placeholder="Escriba su email" Grid.Row="4" Grid.Column="1"  Margin="0,0,30,0"/>
+        <Label Text="DNI:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="5" />
+        <Entry Text="" TextColor="Black" Placeholder="Escriba su DNI" Grid.Row="5" Grid.Column="1"  Margin="0,0,30,0"/>
+        <Label Text="Contraseña:" VerticalTextAlignment="Center" HorizontalTextAlignment="End" TextColor="Black" FontSize="Medium" Grid.Column="0" Grid.Row="6" />
+        <Entry Text="" TextColor="Black" Placeholder="Escriba su contraseña" Grid.Row="6" Grid.Column="1"  Margin="0,0,30,0"/>
+        <Button 
+            x:Name="BtnCrearCuenta"
+            Grid.Row="7" 
+            Grid.Column="0" 
+            Grid.ColumnSpan="2"
+            Margin="20"
+            Text="Crear Cuenta "
+            CornerRadius="20"
+            Clicked="CrearCuentaEnFirebase"
+            BackgroundColor="{StaticResource ColorBotones}"
+            />
+    </Grid>
+</ContentPage>

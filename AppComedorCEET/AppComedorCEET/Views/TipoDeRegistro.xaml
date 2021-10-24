@@ -37,6 +37,7 @@
             Grid.ColumnSpan="2"
             Margin="60"
             Text="Continuar"
+            Clicked="AbrirPantallaCrearCuenta"
             BackgroundColor="{StaticResource ColorBotones}"
             />
     </Grid>
